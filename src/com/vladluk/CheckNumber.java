@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class CheckNumber {
     static String a,
-            b, op;
+            b,
+            op;
 
     public static void NumType(String data1) {
         String[] arab = new String[] {
@@ -68,10 +69,10 @@ public class CheckNumber {
         }
 
         if (Arrays.asList(arab).contains(a) && Arrays.asList(arab).contains(b)) {
-            Calculate.Calc(a,b,op);
+            Calculate.Calc(a, b, op);
             System.out.println(Calculate.result);
         } else if (Arrays.asList(rome).contains(a) && Arrays.asList(rome).contains(b)) {
-            CalculateRome.CalcRome(a,b,op);
+            CalculateRome.CalcRome(a, b, op);
             System.out.println(CalculateRome.result);
         } else {
             System.out.println("Ошибка ввода!");

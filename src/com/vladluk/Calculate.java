@@ -8,19 +8,19 @@ public class Calculate {
 
         switch (op) {
             case "+" -> {
-                c = Integer.parseInt(a) + Integer.parseInt(b);
+                    c = Integer.parseInt(a) + Integer.parseInt(b);
                 result = String.valueOf(c);
             }
             case "-" -> {
-                c = Integer.parseInt(a) - Integer.parseInt(b);
+                    c = Integer.parseInt(a) - Integer.parseInt(b);
                 result = String.valueOf(c);
             }
             case "*" -> {
-                c = Integer.parseInt(a) * Integer.parseInt(b);
+                    c = Integer.parseInt(a) * Integer.parseInt(b);
                 result = String.valueOf(c);
             }
             case "/" -> {
-                c = Integer.parseInt(a) / Integer.parseInt(b);
+                    c = Integer.parseInt(a) / Integer.parseInt(b);
                 result = String.valueOf(c);
             }
         }

@@ -21,7 +21,7 @@ public class Main {
                 """);
 
         System.out.println("Введите данные: \n");
-        while (true){
+        while (true) {
             Scanner in =new Scanner(System. in );
             data1 = in.nextLine();
             CheckNumber.NumType(data1);
