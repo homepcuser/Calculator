@@ -6,21 +6,23 @@ public class Calculate {
 
     public static void Calc(String a, String b, String op) {
 
-        if (op.contains("+")) {
-            c = Integer.valueOf(a) + Integer.valueOf(b);
-            result = String.valueOf(c);
-        }
-        if (op.contains("-")) {
-            c = Integer.valueOf(a) - Integer.valueOf(b);
-            result = String.valueOf(c);
-        }
-        if (op.contains("*")) {
-            c = Integer.valueOf(a) * Integer.valueOf(b);
-            result = String.valueOf(c);
-        }
-        if (op.contains("/")) {
-            c = Integer.valueOf(a) / Integer.valueOf(b);
-            result = String.valueOf(c);
+        switch (op) {
+            case "+" -> {
+                c = Integer.parseInt(a) + Integer.parseInt(b);
+                result = String.valueOf(c);
+            }
+            case "-" -> {
+                c = Integer.parseInt(a) - Integer.parseInt(b);
+                result = String.valueOf(c);
+            }
+            case "*" -> {
+                c = Integer.parseInt(a) * Integer.parseInt(b);
+                result = String.valueOf(c);
+            }
+            case "/" -> {
+                c = Integer.parseInt(a) / Integer.parseInt(b);
+                result = String.valueOf(c);
+            }
         }
     }
 }

@@ -74,7 +74,7 @@ public class CheckNumber {
             CalculateRome.CalcRome(a,b,op);
             System.out.println(CalculateRome.result);
         } else {
-            System.out.println("Input data not correct!");
+            System.out.println("Ошибка ввода!");
             System.exit(0);
         }
 
