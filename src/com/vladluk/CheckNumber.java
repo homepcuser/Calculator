@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CheckNumber {
     static String a,
-            b;
+            b, op;
 
     public static void NumType(String data1) {
         String[] arab = new String[] {
@@ -39,6 +39,8 @@ public class CheckNumber {
             subStr = data1.split(delimeter);
             a = subStr[0].replace(" ", "");
             b = subStr[1].replace(" ", "");
+            op = "+";
+
         }
         if (data1.contains("-")) {
             String[] subStr;
@@ -46,6 +48,7 @@ public class CheckNumber {
             subStr = data1.split(delimeter);
             a = subStr[0].replace(" ", "");
             b = subStr[1].replace(" ", "");
+            op = "-";
         }
         if (data1.contains("*")) {
             String[] subStr;
@@ -53,6 +56,7 @@ public class CheckNumber {
             subStr = data1.split(delimeter);
             a = subStr[0].replace(" ", "");
             b = subStr[1].replace(" ", "");
+            op = "*";
         }
         if (data1.contains("/")) {
             String[] subStr;
@@ -60,13 +64,14 @@ public class CheckNumber {
             subStr = data1.split(delimeter);
             a = subStr[0].replace(" ", "");
             b = subStr[1].replace(" ", "");
+            op = "/";
         }
 
         if (Arrays.asList(arab).contains(a) && Arrays.asList(arab).contains(b)) {
-            Calculate.Calc(data1);
+            Calculate.Calc(a,b,op);
             System.out.println(Calculate.result);
         } else if (Arrays.asList(rome).contains(a) && Arrays.asList(rome).contains(b)) {
-            CalculateRome.CalcRome(data1);
+            CalculateRome.CalcRome(a,b,op);
             System.out.println(CalculateRome.result);
         } else {
             System.out.println("Input data not correct!");

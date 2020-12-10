@@ -4,34 +4,22 @@ public class Calculate {
     static int c;
     static String result;
 
-    public static void Calc(String data1) {
+    public static void Calc(String a, String b, String op) {
 
-        if (data1.contains("+")) {
-            String[] subStr;
-            String delimeter = "\\+"; // Разделитель
-            subStr = data1.split(delimeter);
-            c = Integer.valueOf(subStr[0].replace(" ", "")) + Integer.valueOf(subStr[1].replace(" ", ""));
+        if (op.contains("+")) {
+            c = Integer.valueOf(a) + Integer.valueOf(b);
             result = String.valueOf(c);
         }
-        if (data1.contains("-")) {
-            String[] subStr;
-            String delimeter = "-"; // Разделитель
-            subStr = data1.split(delimeter);
-            c = Integer.valueOf(subStr[0].replace(" ", "")) - Integer.valueOf(subStr[1].replace(" ", ""));
+        if (op.contains("-")) {
+            c = Integer.valueOf(a) - Integer.valueOf(b);
             result = String.valueOf(c);
         }
-        if (data1.contains("*")) {
-            String[] subStr;
-            String delimeter = "\\*"; // Разделитель
-            subStr = data1.split(delimeter);
-            c = Integer.valueOf(subStr[0].replace(" ", "")) * Integer.valueOf(subStr[1].replace(" ", ""));
+        if (op.contains("*")) {
+            c = Integer.valueOf(a) * Integer.valueOf(b);
             result = String.valueOf(c);
         }
-        if (data1.contains("/")) {
-            String[] subStr;
-            String delimeter = "/"; // Разделитель
-            subStr = data1.split(delimeter);
-            c = Integer.valueOf(subStr[0].replace(" ", "")) - Integer.valueOf(subStr[1].replace(" ", ""));
+        if (op.contains("/")) {
+            c = Integer.valueOf(a) / Integer.valueOf(b);
             result = String.valueOf(c);
         }
     }
